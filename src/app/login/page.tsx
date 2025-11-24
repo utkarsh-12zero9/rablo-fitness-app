@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import fitnessBg from '@/assets/fitness.png';
 import googleIcon from '@/assets/Google.png';
@@ -11,7 +11,7 @@ export default function LoginPage() {
     const [showLogin, setShowLogin] = useState(false);
 
     const handleGoogleLogin = () => {
-        window.location.href = 'https://backend-p2wd.onrender.com/auth/google/manager';
+        window.location.href = `${process.env.NEXT_PUBLIC_GOOGLE_AUTH_URL}`;
     };
 
     return (
