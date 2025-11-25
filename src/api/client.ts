@@ -1,5 +1,27 @@
 const BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
+export interface ManagerProfile {
+    _id: string;
+    email: string;
+    name: string;
+    role: string;
+    accCreated: number;
+}
+
+export interface CreateProfileData {
+    contactNumber: string;
+    dob: string;
+    gender: string,
+    role: string;
+    coordinates: number[];
+    city: string;
+    state: string;
+    country: string;
+    pincode: string;
+    name?: string;
+    email?: string;
+}
+
 export const api = {
     getBasicProfile: async (managerID: string): Promise<any> => {
         const response = await fetch(`${BASE_URL}/manager/getBasicProfile/${managerID}`, {
@@ -16,7 +38,7 @@ export const api = {
         return response.json();
     },
 
-    createManagerProfile: async (managerID: string, data: any): Promise<any> => {
+    createManagerProfile: async (managerID: string, data: CreateProfileData): Promise<any> => {
         const url = `${BASE_URL}/manager/createManagerProfile/${managerID}`;
         const response = await fetch(url, {
             method: 'PATCH',
