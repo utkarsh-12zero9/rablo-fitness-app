@@ -34,18 +34,20 @@ export default function LoginPage() {
                 {!showLogin ? (
                     // Welcome Screen
                     <div className="space-y-6 animate-in fade-in slide-in-from-bottom-10 duration-500">
-                        <div className="space-y-2">
+                        <div>
                             <h1 className="text-4xl md:text-5xl font-bold text-white italic leading-tight">
                                 Manage Your <br />
                                 <span className="text-[#D0FD3E]">Fitness Centre</span> <br />
                                 with us!
                             </h1>
-                            <p className="text-gray-200 text-sm md:text-base mt-4">
-                                All your business operations in one place, ready for you to take charge.
+                            <p className="text-gray-200 text-md font-semibold md:text-base mt-4">
+                                All your business operations in one place, <br /> ready for you to take charge.
                             </p>
                         </div>
 
-                        <div className="pt-4">
+                        <hr className='opacity-30'/>
+
+                        <div>
                             <button
                                 onClick={() => setShowLogin(true)}
                                 className="w-full bg-[#D0FD3E] text-black font-bold py-4 rounded-xl hover:bg-[#bce635] transition-colors active:scale-95 transform duration-100 cursor-pointer"
@@ -57,14 +59,15 @@ export default function LoginPage() {
                 ) : (
                     // Login Modal
                     <div className="bg-[#55A6C44D] backdrop-blur-lg rounded-3xl p-6 space-y-6 animate-in fade-in zoom-in-95 duration-300 border border-white/10">
-                        <div className="text-center space-y-2">
+                        <div className="text-center">
                             <h2 className="text-3xl font-bold text-white italic">Hi there!</h2>
-                            <p className="text-gray-400 text-sm">
+                            <p className="text-gray-400 text-sm mt-2">
                                 Sign in to keep things running smoothly.
                             </p>
+                             <hr className='opacity-30 mt-3' />
                         </div>
-
-                        <div className="space-y-3 pt-2 xs text-xs">
+                        
+                        <div className="space-y-3 xs:text-xs">
                             <button
                                 onClick={handleGoogleLogin}
                                 className="w-full bg-[#2F5B6C] hover:bg-[#264f5f] text-white font-medium py-3.5 px-4 rounded-xl flex items-center cursor-pointer justify-center gap-3 transition-colors border border-white/5"
