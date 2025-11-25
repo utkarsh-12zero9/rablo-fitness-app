@@ -1,13 +1,5 @@
 const BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
-export interface ManagerProfile {
-    _id: string;
-    email: string;
-    name: string;
-    role: string;
-    accCreated: number;
-}
-
 export interface CreateProfileData {
     contactNumber: string;
     dob: string;
