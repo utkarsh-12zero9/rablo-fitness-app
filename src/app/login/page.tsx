@@ -25,11 +25,11 @@ export default function LoginPage() {
                     className="object-cover opacity-80"
                     priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/90"></div>
+                <div className="absolute inset-0 bg-linear-to-b from-transparent via-black/20 to-black/90"></div>
             </div>
 
             {/* Content */}
-            <div className="relative z-10 flex flex-col justify-end min-h-screen p-6 pb-12 md:p-12 md:pb-24 max-w-md mx-auto md:max-w-full md:mx-0 md:w-1/2 lg:w-1/3">
+            <div className="relative z-10 flex flex-col justify-end min-h-screen p-6 pb-12 md:p-12 md:pb-24 max-w-md mx-auto md:max-w-full md:w-1/2 lg:w-1/3">
 
                 {!showLogin ? (
                     // Welcome Screen
@@ -48,7 +48,7 @@ export default function LoginPage() {
                         <div className="pt-4">
                             <button
                                 onClick={() => setShowLogin(true)}
-                                className="w-full bg-[#D0FD3E] text-black font-bold py-4 rounded-xl hover:bg-[#bce635] transition-colors active:scale-95 transform duration-100"
+                                className="w-full bg-[#D0FD3E] text-black font-bold py-4 rounded-xl hover:bg-[#bce635] transition-colors active:scale-95 transform duration-100 cursor-pointer"
                             >
                                 Get Started
                             </button>
@@ -64,10 +64,10 @@ export default function LoginPage() {
                             </p>
                         </div>
 
-                        <div className="space-y-3 pt-2">
+                        <div className="space-y-3 pt-2 xs text-xs">
                             <button
                                 onClick={handleGoogleLogin}
-                                className="w-full bg-[#334155] hover:bg-[#475569] text-white font-medium py-3.5 px-4 rounded-xl flex items-center justify-center gap-3 transition-colors border border-white/5"
+                                className="w-full bg-[#334155] hover:bg-[#475569] text-white font-medium py-3.5 px-4 rounded-xl flex items-center cursor-pointer justify-center gap-3 transition-colors border border-white/5"
                             >
                                 <Image src={googleIcon} alt="Google" width={20} height={20} />
                                 <span>Continue with Google</span>
