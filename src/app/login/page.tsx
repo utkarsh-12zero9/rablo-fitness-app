@@ -25,7 +25,7 @@ export default function LoginPage() {
                     className="object-cover opacity-80"
                     priority
                 />
-                <div className="absolute inset-0 bg-linear-to-b from-transparent via-black/20 to-black/90"></div>
+                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.095)_25%,rgba(0,0,0,0.95)_75%)]"></div>
             </div>
 
             {/* Content */}
@@ -56,7 +56,7 @@ export default function LoginPage() {
                     </div>
                 ) : (
                     // Login Modal
-                    <div className="bg-[#1E293B]/90 backdrop-blur-md rounded-3xl p-6 space-y-6 animate-in fade-in zoom-in-95 duration-300 border border-white/10">
+                    <div className="bg-[#55A6C44D] backdrop-blur-lg rounded-3xl p-6 space-y-6 animate-in fade-in zoom-in-95 duration-300 border border-white/10">
                         <div className="text-center space-y-2">
                             <h2 className="text-3xl font-bold text-white italic">Hi there!</h2>
                             <p className="text-gray-400 text-sm">
@@ -67,7 +67,7 @@ export default function LoginPage() {
                         <div className="space-y-3 pt-2 xs text-xs">
                             <button
                                 onClick={handleGoogleLogin}
-                                className="w-full bg-[#334155] hover:bg-[#475569] text-white font-medium py-3.5 px-4 rounded-xl flex items-center cursor-pointer justify-center gap-3 transition-colors border border-white/5"
+                                className="w-full bg-[#2F5B6C] hover:bg-[#264f5f] text-white font-medium py-3.5 px-4 rounded-xl flex items-center cursor-pointer justify-center gap-3 transition-colors border border-white/5"
                             >
                                 <Image src={googleIcon} alt="Google" width={20} height={20} />
                                 <span>Continue with Google</span>
@@ -75,7 +75,7 @@ export default function LoginPage() {
 
                             <button
                                 disabled
-                                className="w-full bg-[#334155] text-gray-400 cursor-not-allowed font-medium py-3.5 px-4 rounded-xl flex items-center justify-center gap-3 border border-white/5"
+                                className="w-full bg-[#2F5B6C] text-gray-400 cursor-not-allowed font-medium py-3.5 px-4 rounded-xl flex items-center justify-center gap-3 border border-white/5"
                             >
                                 <Image src={linkedinIcon} alt="LinkedIn" width={20} height={20} />
                                 <span>Continue with LinkedIn</span>
@@ -83,7 +83,7 @@ export default function LoginPage() {
 
                             <button
                                 disabled
-                                className="w-full bg-[#334155] text-gray-400 cursor-not-allowed font-medium py-3.5 px-4 rounded-xl flex items-center justify-center gap-3 border border-white/5"
+                                className="w-full bg-[#2F5B6C] text-gray-400 cursor-not-allowed font-medium py-3.5 px-4 rounded-xl flex items-center justify-center gap-3 border border-white/5"
                             >
                                 <Image src={facebookIcon} alt="Facebook" width={20} height={20} />
                                 <span>Continue with Facebook</span>
