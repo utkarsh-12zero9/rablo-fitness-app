@@ -25,7 +25,7 @@ export const Input: React.FC<InputProps> = ({
             )}
             <input
                 id={inputId}
-                className={`appearance-none block w-full px-4 py-3 border ${error ? 'border-red-300 focus:border-red-500 focus:ring-red-200' : 'border-gray-200 focus:border-blue-500 focus:ring-blue-100' } rounded-xl shadow-sm placeholder-gray-400 focus:outline-none focus:ring-4 transition-all duration-200 sm:text-sm ${className}`}
+                className={`text-gray-700 appearance-none block w-full px-4 py-3 border ${error ? 'border-red-300 focus:border-red-500 focus:ring-red-200' : 'border-gray-200 focus:border-blue-500 focus:ring-blue-100' } rounded-xl shadow-sm placeholder-gray-400 focus:outline-none focus:ring-4 transition-all duration-200 sm:text-sm ${className}`}
                 {...props}
             />
             {error && <p className="mt-1 text-sm text-red-600">{error}</p>}
