@@ -16,7 +16,7 @@ export default function CreateProfilePage() {
         name: '',
         email: '',
         contactNumber: '',
-        gender: '',
+        gender: 'Male',
         dob: '',
         role: 'Manager',
         coordinates: [77.5946, 12.9716],
@@ -27,9 +27,6 @@ export default function CreateProfilePage() {
     });
 
     const formFields = [
-        { label: "Full Name", name: "name", type: "text", placeholder: "John Doe", required: true },
-        { label: "Email Address", name: "email", type: "email", placeholder: "john@example.com", required: true },
-        { label: "Gender", name: "gender", type: "text", placeholder: "Male", required: true },
         { label: "Contact Number", name: "contactNumber", type: "tel", placeholder: "9999999999", required: true },
         { label: "Date of Birth", name: "dob", type: "date", required: true },
         { label: "City", name: "city", placeholder: "Bengaluru", required: true },
@@ -87,7 +84,7 @@ export default function CreateProfilePage() {
 
         try {
             // Basic validation
-            if (!formData.contactNumber || !formData.dob || !formData.city || !formData.state || !formData.country || !formData.pincode || formData.gender) {
+            if (!formData.contactNumber || !formData.dob || !formData.city || !formData.state || !formData.country || !formData.pincode || !formData.gender) {
                 throw new Error('Please fill in all required fields');
             }
             
